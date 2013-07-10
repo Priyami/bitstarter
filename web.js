@@ -8,9 +8,9 @@ if (err)
 throw err;
 if (data)
  console.log(data.toString('utf8'));
-	response.send(data.toString('utf8'));
+	//response.send(data.toString('utf8'));
 	});
-
+    response.send(data.toString('utf8'));
     response.send('hello');
 });
 
