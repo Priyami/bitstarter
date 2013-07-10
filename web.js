@@ -3,8 +3,11 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-    var content = fs.readFileSync('index.html');
-  response.send(content)
+    fs.readFile('/etc/passwd', function (err, data) {
+  if (err) throw err;
+  console.log(data);
+});
+  response.send(data);
 });
 
 var port = process.env.PORT || 5000;
