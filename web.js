@@ -9,9 +9,10 @@ throw err;
 if (data)
  console.log(data.toString('utf8'));
  content = data.toString('utf8');
-	response.send(content);
+	//response.send(content);
 	});
     //response.send(content);
+    response.write(content);
     response.send('hello');
 });
 
