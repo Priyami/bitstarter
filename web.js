@@ -3,10 +3,14 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-    var content = fs.readFile('index.html');
-    console.log(content);
-    //console.log("content from Index.html");
-    response.send(JSON.parse(content));
+    fs.readFile('index.html', function (err, data) {
+if (err)
+throw err;
+if (data)
+ console.log(data.toString('utf8'));
+	response.send(data.toString('utf8'));
+	});
+
     response.send('hello');
 });
 
