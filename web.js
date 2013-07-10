@@ -11,7 +11,7 @@ if (data)
  content = data.toString('utf8');
 	response.send(content);
 	});
-    response.send(content);
+    //response.send(content);
     response.send('hello');
 });
 
