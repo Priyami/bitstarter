@@ -6,10 +6,10 @@ app.get('/', function(request, response) {
     var content = fs.readFile('index.html','utf8');
     console.log("content from Index.html" + content);
     response.send(content);
+    response.send('hello');
 });
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
-
