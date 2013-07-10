@@ -3,7 +3,8 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-    var content = string(fs.readFile("index.html"));
+    var content = fs.readFile("index.html", "utf8");
+    console.log(content);
     //console.log("content from Index.html");
     response.send(JSON.parse(content));
     response.send('hello');
