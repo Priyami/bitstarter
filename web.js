@@ -20,5 +20,5 @@ var htmlfile ="index.html";
 http.createServer(function (req, res) {
   var html = fs.readFileSync(htmlfile).toString();
   res.end(html);
-}).listen(8080, 'localhost');
+}).listen(8080,'localhost');
 console.log('Server running at http://localhost:8080/');
